@@ -1,5 +1,4 @@
-# Used-car-sales-report-dashboar
-In this Used car sales report my project in power bi, i have upload my project
+# 🚗 Used Car Sales Report — Power BI Dashboard
 
 # 📘 Project Overview
 This project analyzes used car sales data to identify and improve pricing strategies, sales performance, and market transparency in the pre-owned vehicle industry. The goal is to explore how various factors — such as make, model, year, mileage, and region — influence vehicle value and sales volume, ultimately helping dealerships optimize pricing and inventory decisions.
