@@ -10,7 +10,8 @@ Identifying regional performance trends and market transparency gaps.
 Providing data-driven insights to improve sales strategy and vehicle pricing models.
 
 # 🗂️ Data Sources
-1.Primary Dataset: Kaggle – Used Car Sales Dataset
+1.Primary Dataset: Kaggle – Used Car Sales Dataset  
+
 2.GitHub Reference Dataset: divyaneela94-star/Used-car-sales-report-dashboard
 
 # 🔍 Dataset Description
