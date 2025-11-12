@@ -40,3 +40,72 @@ IF Function: Replaced 0 values in Broker Quoter with “₹ 2,500”.
 Date Conversion: Transformed AD_ON column to Short Date format.
 Validation: Checked for duplicates, missing values, and formatting errors.
 Power Query: Applied transformations for type consistency and derived metrics (Age, Price per KM).
+
+# ⚙️ Tools & Technologies
+Excel: Data cleaning, formulas, and initial validation.
+Power Query: Advanced transformations and data modeling.
+Power BI: Interactive dashboards and analytics.
+GitHub: Version control and documentation.
+
+# 📈 Power BI Dashboard Modules
+
+# 1. Overall Sales Report
+Total Units Sold, Revenue, Average Price
+Sales trends by make, model, and fuel type
+
+# 2. Regional Sales Report
+City/State-based analysis with map visuals
+Top-performing cities and regional demand hotspots
+
+# 3. Sales Matrix
+Pivot-style breakdown of sales by model, region, and transmission
+
+# 4. KPI Section
+Key performance metrics:
+Total Revenue
+Sales Volume
+Average Selling Price
+Depreciation Rate
+Year-over-Year Growth
+
+# 5. Dashboard Summary
+Interactive Power BI visuals
+Drill-throughs for make/model performance
+Filters by region, year, and transmission type
+
+# 📊 Key Measures (DAX Formulas)
+1.Total Sales (Units) = COUNTROWS('Sales')
+2.Total Revenue = SUM('Sales'[SellingPrice])
+3.Average Price = DIVIDE([Total Revenue], [Total Sales (Units)], 0)
+4.Depreciation Amount = SUMX('Sales', 'Sales'[OriginalPrice] - 'Sales'[SellingPrice])
+5.Depreciation % = DIVIDE([Depreciation Amount], SUM('Sales'[OriginalPrice]), 0)
+6.YoY Revenue = VAR Prev = CALCULATE([Total Revenue], SAMEPERIODLASTYEAR('Date'[Date]))
+7.RETURN DIVIDE([Total Revenue] - Prev, Prev, BLANK())
+
+# ✅ Validation & Quality Checks
+Removed duplicates and invalid entries.
+Checked for null values in key columns (Selling Price, Year, Mileage).
+Ensured consistent city and state naming conventions.
+Confirmed correct data types for numeric and date columns.
+
+# 📅 Future Enhancements
+Integration with real-time data via API.
+Predictive modeling for price forecasting.
+Enhanced visuals for sales funnel and inventory turnover.
+Power BI web embedding for dashboard sharing.
+
+# 🧠 Key Insights
+Depreciation varies significantly by make, fuel type, and mileage.
+SUVs and diesel vehicles maintain higher resale values.
+Metro regions like Delhi and Mumbai have higher price variance.
+Automatics show faster depreciation than manuals over time.
+
+# ⭐ Acknowledgements
+
+# 1.Kaggle 
+for dataset sources.
+# 2.Power BI Community
+ for dashboard inspiration.
+# 3.GitHub Repository Reference
+ for baseline structure.
+
